@@ -1,16 +1,17 @@
-let httpRequest = new XMLHttpRequest(); 
+//let httpRequest = new XMLHttpRequest(); 
 
 function makeRequest() {
-    httpRequest.onreadystatechange = getResponse; 
-    httpRequest.open("GET", "http://localhost:8080/v1/products")
-    httpRequest.send();
+    //httpRequest.onreadystatechange = getResponse; 
+    //httpRequest.open("GET", "http://localhost:8080/v1/products")
+    //httpRequest.send();
+    fetchSomething(); 
 } 
 
 function fetchSomething() {
-    fetch("http://localhost:8080/v1/products").then(function(element) {
-        let elementJson = JSON.parse(element.body); 
-    }).catch(function() {
-
+    fetch("http://localhost:49559/v1/products").then(function(element) {
+        console.log(element.json()); 
+    }).catch(function(err) {
+        console.log(err)
     });
 }
 

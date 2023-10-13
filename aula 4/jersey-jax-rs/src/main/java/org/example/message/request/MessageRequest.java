@@ -1,7 +1,6 @@
-package org.example.dto;
+package org.example.message.request;
 
-public class Message {
-
+public class MessageRequest {
     private String message;
 
     public String getMessage() {
@@ -11,4 +10,5 @@ public class Message {
     public void setMessage(String message) {
         this.message = message;
     }
+
 }
